@@ -119,10 +119,10 @@ function animateCounter(element, target) {
     current += increment;
     
     if (current >= target) {
-      element.textContent = target.toLocaleString();
+      element.textContent = prefix + target.toLocaleString();
       clearInterval(counter);
     } else {
-      element.textContent = Math.floor(current).toLocaleString();
+      element.textContent = prefix + Math.floor(current).toLocaleString();
     }
   }, 50);
 }
@@ -134,6 +134,7 @@ const kpiObserver = new IntersectionObserver((entries) => {
       const valueElement = entry.target.querySelector('.kpi-value');
       const text = valueElement.textContent;
       const number = parseInt(text.replace(/[^0-9]/g, ''));
+      const prefix = text.trim().startsWith('+') ? '+' : '';
       
       entry.target.classList.add('counted');
       animateCounter(valueElement, number);

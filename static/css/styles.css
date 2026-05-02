@@ -255,7 +255,6 @@ body {
   text-align: center;
   transition: var(--transition);
   position: relative;
-  overflow: hidden;
 }
 
 .kpi-card::before {
@@ -279,6 +278,8 @@ body {
   font-weight: 700;
   color: var(--accent-blue);
   margin-bottom: 0.5rem;
+  overflow: visible !important;
+  line-height: 1.1;
 }
 
 .kpi-label {
@@ -300,6 +301,7 @@ body {
   background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
   border-radius: 2px;
 }
+
 
 /* ==================== INTRO CARD ==================== */
 
