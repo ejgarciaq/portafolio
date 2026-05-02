@@ -78,13 +78,12 @@ body {
 }
 
 .avatar {
-<<<<<<< HEAD
-  width: 200px;
-  height: 200px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   margin: 0 auto 1rem;
   overflow: hidden; /* Esto hace que la imagen se recorte en círculo */
-  border: 3px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   background: white; /* Opcional: fondo por si la imagen tiene transparencia */
 }
 
@@ -93,23 +92,12 @@ body {
   height: 100%;
   object-fit: cover; /* Muy importante para que no se estire la foto */
   display: block;
-=======
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1rem;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 2rem;
+
 }
 
 .avatar svg {
   width: 100%;
   height: 100%;
->>>>>>> da5a0bbbdae7398b7e20554a47786f7b463e03cd
 }
 
 .name {
@@ -166,10 +154,10 @@ body {
 
 /* Social Links */
 .social-links {
-  display: flex;
-  gap: 1rem;
+  display: flex; /* Para alinear los íconos horizontalmente */
+  gap: 1rem; /* Espacio entre los íconos */
   justify-content: center;
-  padding-top: 1rem;
+  padding-top: .5rem; /* Espacio superior para separar de la navegación */
   border-top: 1px solid var(--border-color);
 }
 
