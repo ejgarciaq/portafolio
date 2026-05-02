@@ -78,6 +78,7 @@ body {
 }
 
 .avatar {
+<<<<<<< HEAD
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -92,6 +93,23 @@ body {
   height: 100%;
   object-fit: cover; /* Muy importante para que no se estire la foto */
   display: block;
+=======
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.avatar svg {
+  width: 100%;
+  height: 100%;
+>>>>>>> da5a0bbbdae7398b7e20554a47786f7b463e03cd
 }
 
 .name {
