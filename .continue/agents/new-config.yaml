@@ -1,0 +1,30 @@
+# This is an example configuration file
+# To learn more, see the full config.yaml reference: https://docs.continue.dev/reference
+
+name: Local + Cloud Hybrid
+version: 1.0.0
+schema: v1
+
+models:
+  # Modelo local principal
+  - name: qwen-coder-local
+    provider: ollama
+    model: qwen2.5-coder:7b
+
+  # Otro modelo local opcional
+  - name: llama3-local
+    provider: ollama
+    model: llama3
+
+  # Modelos cloud opcionales
+
+  - uses: google/gemini-1.5-flash
+    with:
+      GEMINI_API_KEY: ${{ AIzaSyA0tT8GU01yvzzPA7IgoMmGqH_4bJRcfCM }}
+
+autocomplete:
+  provider: ollama
+  model: qwen2.5-coder:7b
+
+mcpServers:
+  - uses: anthropic/memory-mcp
