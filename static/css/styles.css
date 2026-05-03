@@ -357,7 +357,7 @@ body {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--border-color);
 }
@@ -368,7 +368,7 @@ body {
 
 .timeline-dot {
   position: absolute;
-  left: -9px;
+  left: -25px;
   top: 0;
   width: 16px;
   height: 16px;
