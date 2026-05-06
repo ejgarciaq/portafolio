@@ -6,6 +6,8 @@
   <title>Portafolio Profesional</title>
     <link rel="stylesheet" href="static/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://www.google.com/recaptcha/api.js?render=6LenGd0sAAAAAKATgg-T9vOWoWgoQXDsYlpLVUol
+"></script>
 </head>
 
 <body>
@@ -545,10 +547,14 @@
             </div>
           </div>
 
-          <form class="contact-form" action="https://formspree.io/f/xdabdddo" method="POST">
+          <form class="contact-form" id="mi-formulario" action="https://formspree.io/f/TU_ID" method="POST">
             <input type="text" name="nombre" placeholder="Tu nombre" required>
             <input type="email" name="email" placeholder="Tu email" required>
             <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+            
+            <!-- Campo oculto para el token de reCAPTCHA -->
+            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+            
             <button type="submit">Enviar Mensaje</button>
           </form>
         </div>
@@ -559,3 +565,19 @@
   <script src="static/js/main.js"></script>
 </body>
 </html>
+
+<script>
+  document.getElementById('mi-formulario').addEventListener('submit', function(e) {
+    e.preventDefault(); // Detenemos el envío un momento
+    
+    grecaptcha.ready(function() {
+      grecaptcha.execute('TU_SITE_KEY', {action: 'submit'}).then(function(token) {
+        // Agregamos el token al campo oculto
+        document.getElementById('g-recaptcha-response').value = token;
+        
+        // Ahora sí, enviamos el formulario programáticamente
+        document.getElementById('mi-formulario').submit();
+      });
+    });
+  });
+</script>
