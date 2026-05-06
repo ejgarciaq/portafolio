@@ -1911,9 +1911,7 @@ body {
     margin-bottom: 0.5rem;
   }
 }
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
-  border-radius: 4px;
-}
+
 
 .language-description {
   color: var(--text-muted);
