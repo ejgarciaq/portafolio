@@ -183,15 +183,7 @@ function toggleSidebar() {
   }
 }
 
-// Close sidebar when clicking on a nav link on mobile
-if (window.innerWidth < 768) {
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      sidebarOpen = false;
-      document.querySelector('.sidebar').style.transform = 'translateX(-100%)';
-    });
-  });
-}
+// NOTE: mantén el menú visible en móvil/tablet al cambiar de sección.
 
 // ==================== HOVER EFFECTS ==================== 
 
