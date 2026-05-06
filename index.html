@@ -6,8 +6,7 @@
   <title>Portafolio Profesional</title>
     <link rel="stylesheet" href="static/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://www.google.com/recaptcha/api.js?render=6LenGd0sAAAAAKATgg-T9vOWoWgoQXDsYlpLVUol
-"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LenGd0sAAAAAKATgg-T9vOWoWgoQXDsYlpLVUol"></script>
 </head>
 
 <body>
@@ -568,14 +567,15 @@
 
 <script>
   document.getElementById('mi-formulario').addEventListener('submit', function(e) {
-    e.preventDefault(); // Detenemos el envío un momento
+    e.preventDefault(); // Detenemos el envío automático
     
     grecaptcha.ready(function() {
-      grecaptcha.execute('TU_SITE_KEY', {action: 'submit'}).then(function(token) {
-        // Agregamos el token al campo oculto
+      // Usamos la misma Site Key que tienes en el head
+      grecaptcha.execute('6LenGd0sAAAAAKATgg-T9vOWoWgoQXDsYlpLVUol', {action: 'submit'}).then(function(token) {
+        // Añadimos el token al input oculto
         document.getElementById('g-recaptcha-response').value = token;
         
-        // Ahora sí, enviamos el formulario programáticamente
+        // Ahora sí enviamos el formulario
         document.getElementById('mi-formulario').submit();
       });
     });
